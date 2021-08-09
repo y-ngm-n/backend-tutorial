@@ -24,3 +24,5 @@
           '하드코딩'으로 로그인 화면 간단하게 만들기 (비효율적)
           최적화 : View/라우팅/Controller/서버 가동  분리하기
           package.json / package-lock.json / node_modules 알아보기
+          
+  - 8/9 : 깃/깃허브 연동시키기
