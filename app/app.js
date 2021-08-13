@@ -23,6 +23,7 @@ app.use("/", home);  // 미들웨어를 등록해주는 메서드.(?)
 // < view 관리 >
 app.set("views", "./src/views");    // views를 세팅, view를 관리할 파일이 저장될 폴더의 경로를 지정
 app.set("view engine", "ejs");  // html 코드를 해석할 엔진을 정해줌(ejs : 가장 많이 쓰이는 view 엔진)
+app.use(express.static(`${__dirname}/src/public`));  // 현재 파일 경로 밑의 src/public 이라는 디렉터리를 정적 경로로 추가하는 코드 (미들웨어) ???? -> login.ejs에서 js폴더로 접근하게 되면 public 폴더로 가게 됨 (login.ejs에 login.js 연결하기 위한 코드)
 
 
 // app export
