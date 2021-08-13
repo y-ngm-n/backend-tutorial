@@ -248,7 +248,7 @@
 - github에 업로드된 프로젝트로 업데이트하기
 
     git pull origin master
-    ->igin 저장소의 master 브랜치에 해당하는 내용 가져옴
+    -> origin 저장소의 master 브랜치에 해당하는 내용 가져옴
     
     
 - .gitignore : 파일명 앞에 ** 붙이면 하위폴더까지 싹 뒤져서 제외. (recursive)
