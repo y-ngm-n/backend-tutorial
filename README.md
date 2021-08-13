@@ -44,3 +44,4 @@
         - 폴더 구조 최적화
         - 프론트단 js파일 생성 후 ejs파일에 연결 (public 폴더)
         - nodemon 적용시키기
+        - DOM으로 HTML 객체에 접근

@@ -283,6 +283,20 @@
           알아서 서버를 재가동함. 수정할 때마다 일일이 껐다 켤 필요 없음
     
         
+- DOM
+
+    개념 : Document Object Model -> HTML에 존재하는 데이터를 js로 가져와
+                                제어할 수 있게 해주는 인터페이스
+    사용 : document 객체 사용 -> document.제어함수() 식으로 사용
+    
+    1) input 태그 값 가져오기 : 태그.value 로 접근
+    
+    
+- ejs 사용 시 script를 연결하는 방식 : defer / async  <script src="" defer>
+  -> 다른 강의 참고
+  
+  
+- fetch() : 데이터를 서버로 보내기
         
         
     
