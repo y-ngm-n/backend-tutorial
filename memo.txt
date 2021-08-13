@@ -266,6 +266,13 @@
 
     미들웨어 / app.use() / 프론트단 js파일 생성 후 ejs 파일에 연결
     ??????
+    
+    
+- git push
+
+    git push remote branch
+    remote값과 branch값을 지정하지 않으면 기본으로 설정되어 있는 값으로 실행
+    -> git push origin master 자동 실행
         
         
         
