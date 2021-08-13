@@ -273,6 +273,15 @@
     git push remote branch
     remote값과 branch값을 지정하지 않으면 기본으로 설정되어 있는 값으로 실행
     -> git push origin master 자동 실행
+    
+    
+- nodemon
+
+    설치 : npm install nodemon -g (-g : 전역)
+    사용 : nodemon 실행파일경로 -> nodemon으로 서버 가동
+    기능 : nodemon으로 서버를 가동하면, 소스 코드를 수정해 저장할 때마다
+          알아서 서버를 재가동함. 수정할 때마다 일일이 껐다 켤 필요 없음
+    
         
         
         
