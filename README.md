@@ -45,3 +45,7 @@
         - 프론트단 js파일 생성 후 ejs파일에 연결 (public 폴더)
         - nodemon 적용시키기
         - DOM으로 HTML 객체에 접근
+        
+- 8/14 토요일 (비)
+
+        - fetch 사용

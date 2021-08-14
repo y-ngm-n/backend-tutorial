@@ -15,5 +15,14 @@ function lgn() {
         pw: pw.value,
     };
     
-    console.log(req);
+    console.log(req, JSON.stringify(req));
+    
+    // fetch : 데이터를 보낼 경로와 보낼 데이터(객체)를 파라미터로 지정
+    fetch("/login", {
+        method: "POST",  // http 메서드 중 POST 메서드로 데이터 전달해야함
+        headers: {  // 보낼 데이터에 대한 설명으로 header를 작성
+            "Content-Type": "application/json"  // json 데이터 전달 명시
+        },
+        body: JSON.stringify(req)  // req를 JSON의 문자열 형태로 변환
+    });
 }

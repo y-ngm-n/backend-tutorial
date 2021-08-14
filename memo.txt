@@ -289,14 +289,31 @@
                                 제어할 수 있게 해주는 인터페이스
     사용 : document 객체 사용 -> document.제어함수() 식으로 사용
     
-    1) input 태그 값 가져오기 : 태그.value 로 접근
+    * input 태그 값 가져오기 : 태그.value 로 접근
     
     
-- ejs 사용 시 script를 연결하는 방식 : defer / async  <script src="" defer>
-  -> 다른 강의 참고
+- ejs 사용 시 script를 연결하는 방식
+
+    defer / async  <script src="" defer>
+    -> 다른 강의 참고
   
   
 - fetch() : 데이터를 서버로 보내기
+
+    fetch("경로", 보낼 데이터(객체));
+        ex) fetch("/login", {
+              method: ,
+              headers: ,
+              body: 
+            })
+        
+    해당 데이터를 서버가 받기 위해서는 필요한 형식의 API가 마련되어있어야 함
+    
+
+
+- API : Application Programming Interface
+
+    개념 : 다른 강의 참고
         
         
     
