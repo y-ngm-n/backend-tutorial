@@ -313,7 +313,41 @@
 
 - API : Application Programming Interface
 
-    개념 : 다른 강의 참고
+    개념 : 서버와 클라이언트가 통신하기 위한 규약
+    응용프로그램에서 사용할 수 있도록, 운영체제나 프로그래밍 언어가 제공하는
+    기능을 제어할 수 있게 만든 인터페이스이다.
+    -> 파일제어, 창제어, 화상처리, 문자제어 등을 위한 인터페이스 주로 제공
+    
+    
+- Restful API
+
+    1) Rest의 정의 : 분산 시스템 설계를 위한 아키텍쳐(구성) 스타일
+                    -> "사이트 구성 원리."
+                    (REpresentational/State/Transfer : 표현/상태/전송)
+                    -> 자원의 표현을 가지고 상태를 전달한다.
+                    
+    2) Restful API : 사이트 구성 원리를 따르는 API.
+    
+    
+- 파싱 ?
+
+
+- body-parser 모듈
+
+    fetch로 데이터를 서버로 넘길 때,
+    데이터의 body에 접근하기 위해 설치하는 모듈.
+    
+    설치 : npm i body-parser -s
+    (-s : package.json 파일 의존성 목록에 해당 모듈을 명시)
+    
+    
+- 데이터를 수신할 API 만들기
+
+    0) body-parser 모듈 설치
+    1) 라우팅 ctrl에서 해당 fetch에 대한 응답 함수(API?) 만들기
+    2) 라우팅 index에서 해당 함수 import해서 post 메서드로 실행
+    3) app에서 미들웨어 작성 : body-parser로 json 데이터 파싱 / 한글인코딩
+    
         
         
     
