@@ -1,3 +1,5 @@
+- 토큰 : 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
+
 - 디렉터리 명 : 소문자/하이픈으로 구성 (대문자/언더바 사용 지양)
 
 
@@ -347,6 +349,11 @@
     1) 라우팅 ctrl에서 해당 fetch에 대한 응답 함수(API?) 만들기
     2) 라우팅 index에서 해당 함수 import해서 post 메서드로 실행
     3) app에서 미들웨어 작성 : body-parser로 json 데이터 파싱 / 한글인코딩
+    
+    
+- 로그인 인증하기
+
+    1) include() 메서드 : 
     
         
         

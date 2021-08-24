@@ -2,6 +2,12 @@
 
 "use strict";
 
+// 계정 정보
+const users = {
+    id: ["song", "young", "min"],
+    pw: ["1234!", "1234@", "1234#"],
+};
+
 // 렌더링 관련 함수 객체
 const output = {
     
@@ -19,7 +25,22 @@ const output = {
 // 로그인 처리 API 관련 함수 객체
 const process = {
     login: (req, res) => {
-        console.log(req.body);
+        const id = req.body.id;
+        const pw = req.body.pw;
+        
+        if (users.id.includes(id)) {
+            const idx = users.id.indexOf(id);
+            if (users.pw[idx] === pw) {
+                return res.json({
+                    success: true,
+                })
+            }
+        }
+        
+        return res.json({
+            success: false,
+            msg: "login failed"
+        })
     }
 }
 

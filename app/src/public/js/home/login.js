@@ -24,5 +24,7 @@ function lgn() {
             "Content-Type": "application/json"  // json 데이터 전달 명시
         },
         body: JSON.stringify(req)  // req를 JSON의 문자열 형태로 변환
-    });
+    })
+        .then((res) => res.json())
+        .then(console.log);  //then 메서드로 데이터를 받아옴
 }

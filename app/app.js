@@ -21,6 +21,7 @@ const home = require("./src/routes/home");  // routing 분리해둔 js파일 읽
 app.set("views", "./src/views");    // views를 세팅, view를 관리할 파일이 저장될 폴더의 경로를 지정
 app.set("view engine", "ejs");  // html 코드를 해석할 엔진을 정해줌(ejs : 가장 많이 쓰이는 view 엔진)
 app.use(express.static(`${__dirname}/src/public`));  // 현재 파일 경로 밑의 src/public 이라는 디렉터리를 정적 경로로 추가하는 코드 (미들웨어) ???? -> login.ejs에서 js폴더로 접근하게 되면 public 폴더로 가게 됨 (login.ejs에 login.js 연결하기 위한 코드)
+
 app.use(bodyParser.json());  // body-parser가 json 데이터를 파싱해올 수 있도록 명시 (미들웨어)
 app.use(bodyParser.urlencoded({ extended: true }))  // URL을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될 경우 제대로 인식되지 않는 문제를 해결하기 위한 코드 (미들웨어)
 
