@@ -353,7 +353,11 @@
     
 - 로그인 인증하기
 
-    1) include() 메서드 : 
+    1) include() 메서드
+    2) then() 메서드
+    3) location 메서드
+    4) catch() 메서드
+    5) console.error() / new Error() 메서드
     
         
         

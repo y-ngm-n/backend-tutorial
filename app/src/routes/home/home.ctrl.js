@@ -39,7 +39,7 @@ const process = {
         
         return res.json({
             success: false,
-            msg: "login failed"
+            msg: "login failed!"
         })
     }
 }

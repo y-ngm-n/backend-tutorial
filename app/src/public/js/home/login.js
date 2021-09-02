@@ -25,6 +25,15 @@ function lgn() {
         },
         body: JSON.stringify(req)  // req를 JSON의 문자열 형태로 변환
     })
-        .then((res) => res.json())
-        .then(console.log);  //then 메서드로 데이터를 받아옴
+        .then((res) => res.json())  //then 메서드로 데이터를 받아옴
+        .then((res) => {
+            if (res.success) {
+                location.href = "/";
+            } else {
+                alert(res.msg);
+            }
+        })
+        .catch((err) => {
+            console.error(new Error("로그인 중 에러 발생"));
+        });
 }
