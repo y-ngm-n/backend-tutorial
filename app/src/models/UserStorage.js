@@ -18,9 +18,21 @@ class UserStorage {
             }
             return newUsers;
         }, {});
-        console.log(newUsers);
         return newUsers;
     };
+
+    // 로그인 해당 계정 정보 전달 메서드
+    static getUserInfo(id) {
+        const users = this.#users;
+        const idx = users.id.indexOf(id);
+        const userKeys = Object.keys(users);  // [id, pw, name]
+        const userInfo = userKeys.reduce((newUser, info) => {
+            newUser[info] = users[info][idx];  // id[idx], pw[idx], name[idx]
+            return newUser;
+        }, {});
+        
+        return userInfo;
+    }
 
 }
 
