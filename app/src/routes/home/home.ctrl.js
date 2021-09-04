@@ -2,11 +2,9 @@
 
 "use strict";
 
-// 계정 정보
-const users = {
-    id: ["song", "young", "min"],
-    pw: ["1234!", "1234@", "1234#"],
-};
+
+// 모듈
+const UserStorage = require("../../models/UserStorage");
 
 // 렌더링 관련 함수 객체
 const output = {
@@ -28,19 +26,20 @@ const process = {
         const id = req.body.id;
         const pw = req.body.pw;
         
+        const users = UserStorage.getUsers("id", "pw");
+        
+        const response = {};
         if (users.id.includes(id)) {
             const idx = users.id.indexOf(id);
             if (users.pw[idx] === pw) {
-                return res.json({
-                    success: true,
-                })
+                response.success = true;
+                return res.json(response);
             }
         }
         
-        return res.json({
-            success: false,
-            msg: "login failed!"
-        })
+        response.success = false;
+        response.msg = "login failed.";
+        return res.json(response);
     }
 }
 
