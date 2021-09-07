@@ -1,4 +1,4 @@
-- 토큰 : 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
+- 토큰 : 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
 
 - 디렉터리 명 : 소문자/하이픈으로 구성 (대문자/언더바 사용 지양)
 
@@ -401,6 +401,14 @@
 - 23. 회원가입 화면 만들기
 
     HTML에서 공백은 하이픈(-)으로 표기 (컨벤션)
+    라우터 단에서 렌더링
+    
+    
+- 24. 회원가입 요청 구현
+
+    1) html form 태그 : form 태그 안에 있는 button 태그를 누르면 summit 해주는 기능
+                       따라서, 누르고 나면 페이지가 새로고침됨
+
     
         
     
