@@ -25,12 +25,17 @@ const output = {
     }
 }
 
-// 로그인 처리 API 관련 함수 객체
+// API 관련 함수 객체
 const process = {
     login: (req, res) => {
-        
         const user = new User(req.body);
         const response = user.login();
+        return res.json(response);
+    },
+    
+    register: (req, res) => {
+        const user = new User(req.body);
+        const response = user.register();
         return res.json(response);
     },
 }

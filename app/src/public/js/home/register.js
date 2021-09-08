@@ -12,11 +12,14 @@ const registerBtn = document.querySelector("#button");      // 버튼 태그
 registerBtn.addEventListener("click", rgst);  // 버튼 클릭할 시 lgn함수 실행
 
 function rgst() {
+    
+    if (!id.value) {return alert("Enter ID!");}
+    if (pw.value !== confirmPw.value) {return alert("Passwords do not match!");}
+        
     const req = {
         id: id.value,
         name: name.value,
         pw: pw.value,
-        confirmPw: confirmPw.value,
     };
     
     console.log(req, JSON.stringify(req));

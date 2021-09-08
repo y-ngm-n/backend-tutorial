@@ -14,16 +14,23 @@ class User {
     // 로그인 인증 메서드
     login() {
         
-        const body = this.body;
-        const { id, pw } = UserStorage.getUserInfo(body.id);
+        const client = this.body;
+        const { id, pw } = UserStorage.getUserInfo(client.id);
         
         if (id) {
-            if (id === body.id && pw === body.pw) {
+            if (id === client.id && pw === client.pw) {
                 return {success : true};
             }
             return {success : false, msg : "check password!"};
         }
         return {success : false, msg : "ID not exist!"};
+    }
+    
+    // 회원가입 메서드
+    register() {
+        const client = this.body;
+        const response = UserStorage.save(client);
+        return response;
     }
 }
 
