@@ -33,10 +33,10 @@ class User {
             const response = await UserStorage.save(client);
             return response;
         } catch(err) {
-            return {success: false, msg: err};
-        }  // UserStorage.save() 에 대한 오류처리
-        
-    }
+            console.error(err);
+        }  // UserStorage.save()
+        
+    }
 }
 
 module.exports = User;
