@@ -534,9 +534,38 @@
     RDS : Relational Database Service
     RDS 인스턴스는 계정당 한개만 운영해야 비용이 안듦
     마스터 계정 : admin
-    
     
     
+- 31. AWS RDS 한글 설정 및 MySQL 설치
+
+    1) AWS RDS 한글 설정
+    
+        RDS에 들어간 후 파라미터 그룹 탭으로 이동하면
+        사용자 지정 파라미터 그룹이 나오는데, 여기서
+        한글을 사용하기 위한 파라미터 그룹을 생성한 후
+        특정 파라미터들의 값을 utf-8로 수정하면 된다.
+        - 'char' 검색 > utf8이 적용되는 모든 파라미터의 값을 변경
+        - 'collation' 검색 > utf8_general_ci가 적용되는 모든 파라미터의 값 변경
+        변경사항 저장 후 파라미터 그룹 설정을 마친다.
+        
+        이후 사용하려는 데이터베이스에 들어가 수정 버튼을 누르면
+        데이터베이스 옵션 란이 있는데, 거기서 DB 파라미터 그룹을
+        조금 전에 생성한 파라미터 그룹으로 변경시킴.
+        한글 설정 완료 !
+        
+    2) MySQL 설치
+    
+        구름ide에서 사실상 리눅스를 쓰고있으니깐 우분투에서 MySQL 설치하는 방법을 찾아봄
+        
+        sudo apt install mysql-server
+        
+        이거 하면 걍 깔리넹
+        
+        service mysql start : mysql 시작
+        service mysql stop : mysql 종료
+        
+        - 지금 5.7 버전 깔려있는데 8 버전 까는 방법 알아봐야 할듯
+        - AWS RDS 연결 안되는 문제 
 
     
 
